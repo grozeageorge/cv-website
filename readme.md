@@ -14,7 +14,6 @@ You can view the live version of this website at [https://grozeageorge.netlify.a
 ## Technologies Used
 - HTML
 - CSS
-- JavaScript (optional)
 
 ## How to Use
 1. Clone the repository:
