@@ -102,7 +102,7 @@ body {
 /* Main Content Styles */
 
 .right-side-container {
-    padding-left: 88px;
+    padding-left: 40px;
     padding-top: 40px;
     padding-right: 40px;
     padding-bottom: 180px;
@@ -130,6 +130,7 @@ body {
     font-weight: 400;
     line-height: 24px;
     margin-top: -15px;
+    text-indent: 1em;
 }
 
 .project-section {
@@ -141,24 +142,34 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
+
+.project-title-line {
+  display: flex;
+  align-items: center;
+}
+
 
 .project-name {
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
+    margin: 0;
 }
 
 .project-info {
-    color: #6096FF;
+    font-weight: 500;
+    font-size: 14px;
+    color: #6087d4;
     margin-left: 10px;
 }
 
 .project-time {
-    color: #A8A8A8;
+    color: #999;
     font-size: 12px;
+    margin-left: auto;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -172,8 +183,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    margin-left: -30px;
-    margin-top: -5px;
+    margin-left: -20px;
+    margin-top: 5px;
 }
 
 .project-elements-list li:before {
@@ -183,6 +194,11 @@ body {
 
 .project-container {
     margin-top: -10px;
+}
+
+.education-title::before{
+  content: "•";
+    margin-right: 10px;
 }
 
 .education-section {
@@ -204,42 +220,88 @@ body {
 }
 
 .education-studies {
-    color: #6096FF;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: -10px;
+    margin-bottom: -5px;
+    margin-top: -5px
+}
+
+.education-title-line {
+  display: flex;
+  align-items: center;
 }
 
 .education-title {
+    color: #6087d4;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
-    margin-top: -10px
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .education-info {
     color: #595959;
     font-size: 12px;
     font-style: normal;
-    margin-top: -5px;
+    margin-top: 5px;
+    margin-left: 30px;
 }
 
 .education-ref {
     color: #595959;
     font-size: 12px;
     font-style: normal;
-    margin-top: -5px;
+    margin-top: 5px;
+    margin-left: 30px;
 }
 
 .education-time {
+    margin-left: auto;
     color: #A8A8A8;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: -10px;
-    margin-bottom: 5px;
+}
+
+@media print {
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact; /* Ensure colors are printed correctly */
+  }
+
+  @page {
+    margin: 0.5in; /* Safe paper margin */
+    size: A4; /* or auto if you want flexible */
+  }
+
+  .app-wrapper {
+    transform: scale(0.8); /* Shrinks entire layout */
+    transform-origin: top left;
+    width: 1200px; /* Keep layout fixed, but scale it down */
+  }
+
+  .sidebar-section {
+    width: 300px;
+  }
+
+  .right-side-container {
+    width: 900px;
+    padding-right: 20px;
+    padding-left: 60px;
+  }
+
+  * {
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  .skills-list,
+  .project-elements-list {
+    margin-left: 0 !important;
+  }
 }
